@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chat tipo Grindr</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <header class="sidebar__header">
+        <div class="brand">
+          <span class="brand__dot"></span>
+          <div>
+            <h1>Radar</h1>
+            <p>Matches cercanos</p>
+          </div>
+        </div>
+        <button class="icon-button" aria-label="Nuevo chat">＋</button>
+      </header>
+      <div class="search">
+        <input type="search" placeholder="Buscar" aria-label="Buscar chats" />
+      </div>
+      <section class="matches">
+        <h2>Conexiones</h2>
+        <div class="matches__list" id="matchesList" role="list"></div>
+      </section>
+      <div class="sidebar__list" id="chatList" role="list"></div>
+    </aside>
+
+    <main class="chat">
+      <header class="chat__header">
+        <div class="profile">
+          <div class="avatar avatar--large">JD</div>
+          <div>
+            <h2 id="chatName">Javier • 450 m</h2>
+            <div class="status-row">
+              <span class="status-pill" id="chatStatus">Disponible · 26 años</span>
+              <span class="status-dot" id="chatActivity">Activo ahora</span>
+            </div>
+          </div>
+        </div>
+        <div class="header__actions">
+          <button class="icon-button" aria-label="Videollamada">📹</button>
+          <button class="icon-button" aria-label="Más">⋯</button>
+        </div>
+      </header>
+
+      <section class="chat__messages" id="chatMessages" aria-live="polite"></section>
+      <div class="typing" id="typingIndicator" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+        <p>Escribiendo…</p>
+      </div>
+
+      <form class="chat__input" id="chatForm">
+        <button type="button" class="icon-button" aria-label="Adjuntar">📎</button>
+        <input type="text" id="messageInput" placeholder="Escribe un mensaje" autocomplete="off" />
+        <button type="submit" class="send">Enviar</button>
+      </form>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
